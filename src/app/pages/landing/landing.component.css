@@ -27,7 +27,7 @@
 }
 .fondo2 {
   background-image: url(../../../assets/recursos/fondo2.png);
-  background-size: cover;
+  background-size: contain;
 }
 .o-title {
   color: #ffa502;
@@ -43,13 +43,20 @@
   line-height: 48px;
   color: #01255b;
 }
-.o-text-conocenos {
+.o-text {
   font-family: Airbnb Cereal App Book;
   font-size: 16px;
   line-height: 170%;
   color: rgba(0, 0, 0, 0.8);
-  width: 314px;
-  height: 130px;
-  left: 0px;
-  top: 87.63px;
 }
+.conocenos {
+    width: 314px;
+    height: 130px;
+    left: 0px;
+    top: 87.63px;
+  }
+
+.fondo3 {
+    background-image: url(../../../assets/recursos/fondo3.png);
+    background-size: contain;
+  }
