@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
-
-
+import { ComponentsRoutingModule } from './components-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ComponentsRoutingModule
   ],
   exports:[
     NavComponent,
