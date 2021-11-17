@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponent implements OnInit {
 
+  show:boolean=true;
+  show1:boolean=true;
+  show2:boolean=true;
+  show3:boolean=true;
+  
   constructor() { }
 
   ngOnInit(): void {

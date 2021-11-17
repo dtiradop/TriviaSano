@@ -15,7 +15,9 @@ select {
   box-sizing: border-box;
   border-radius: 2px;
 }
-h2, h1 {
+
+h2,
+h1 {
   color: #01255b;
   margin-bottom: 20px;
   text-align: center;
@@ -154,4 +156,16 @@ h2, h1 {
 
 .progress-bar {
   background-color: #333542;
+}
+.o-btn {
+  padding: 5.88235px;
+  position: static;
+  width: 144.1px;
+  height: 41.65px;
+  left: 885.1px;
+  top: 0px;
+  border-color:#1e90ff;
+  background: #1e90ff;
+  border-radius: 2.35294px;
+  color: white;
 }
