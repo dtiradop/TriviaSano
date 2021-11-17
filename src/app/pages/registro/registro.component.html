@@ -1,0 +1,81 @@
+<div class="container-expand d-flex justify-content-center flex-column" style="background-image: url(../../../assets/recursos/fondo4.png); height: 900px; background-size: contain;">
+    <h1>Crear cuenta</h1>
+    <div class="row d-flex justify-content-center flex-column align-items-center">
+        <div class="col-12 col-sm-12 col-md-10
+            col-lg-10 col-xl-9 text-center">
+            <div class="px-0 pt-4 pb-0 mt-3 mb-3">
+                <form id="form">
+                    <ul id="progressbar">
+                        <li class="active" id="step1">
+                            <strong>Información<br>personal</strong>
+                        </li>
+                        <li id="step2"><strong>Información<br>médica</strong></li>
+                        <li id="step3"><strong>Gustos<br>personales</strong></li>
+                    </ul>
+                    <fieldset>
+                        <h2>Información base</h2>
+                        <form class="row gx-4 gy-3 d-flex justify-content-evenly">
+                            <div class="col-sm-3" style="margin-bottom: 30px;">
+                              <label>Nombre</label>
+                              <input type="text" class="form-control"placeholder="Jane Doe">
+                            </div>
+                            <div class="col-sm-3">
+                                <label>Edad (en años) </label>
+                                <select class="form-select" id="specificSizeSelect">
+                                  <option selected>Escoge</option>
+                                  <option value="1">5</option>
+                                  <option value="2">6</option>
+                                  <option value="3">7</option>
+                                </select>
+                              </div>
+                            <div class="col-sm-4">
+                              <label>Correo Electronico</label>
+                                <input type="email" class="form-control" placeholder="Username">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Fecha de nacimiento</label>
+                                  <input type="email" class="form-control" placeholder="Username">
+                              </div>
+                            <div class="col-sm-2">
+                                <label>Sexo</label>
+                                <select class="form-select" id="specificSizeSelect">
+                                  <option selected>Escoge</option>
+                                  <option value="1">Masculino</option>
+                                  <option value="2">Femenino</option>
+                                </select>
+                              </div>
+                          </form>
+                        <input type="button" name="next-step" 
+                            class="next-step" value="Siguiente" />
+                    </fieldset>
+                    <fieldset>
+                        <h2>Welcome To GFG Step 2</h2>
+                        <input type="button" name="next-step" 
+                            class="next-step" value="Next Step" />
+                        <input type="button" name="previous-step" 
+                            class="previous-step" 
+                            value="Previous Step" />
+                    </fieldset>
+                    <fieldset>
+                        <h2>Welcome To GFG Step 3</h2>
+                        <input type="button" name="next-step" 
+                            class="next-step" value="Final Step" />
+                        <input type="button" name="previous-step" 
+                            class="previous-step" 
+                            value="Previous Step" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="finish">
+                            <h2 class="text text-center">
+                                <strong>FINISHED</strong>
+                            </h2>
+                        </div>
+                        <input type="button" name="previous-step" 
+                            class="previous-step" 
+                            value="Previous Step" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
