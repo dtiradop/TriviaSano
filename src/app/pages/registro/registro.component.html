@@ -1,8 +1,10 @@
+<app-nav></app-nav>
 <div
   class="container-expand d-flex justify-content-center flex-column"
   style="
     background-image: url(../../../assets/recursos/fondo4.png);
-    height: 900px;
+    min-height: 800px;
+    padding: 2rem 5rem;
     background-size: contain;
   "
 >
@@ -12,26 +14,26 @@
       <div class="px-0 pt-4 pb-0 mt-3 mb-3">
         <form id="form">
           <ul id="progressbar">
-            <li class="active" id="step1">
+            <li [ngClass]="{'active':show==1}" id="step1">
               <strong>Información<br />personal</strong>
             </li>
-            <li id="step2">
+            <li [ngClass]="{'active':show==2}" id="step2">
               <strong>Información<br />médica</strong>
             </li>
-            <li id="step3">
+            <li [ngClass]="{'active':show==3}" id="step3">
               <strong>Gustos<br />personales</strong>
             </li>
           </ul>
-          <div *ngIf="show1">
+          <div *ngIf="show==1">
             <fieldset>
               <h2>Información base</h2>
               <form class="row gx-4 gy-3 d-flex justify-content-evenly">
-                <div class="col-sm-3" style="margin-bottom: 30px">
+                <div class="col-sm-3">
                   <label>Nombre</label>
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Jane Doe"
+                    placeholder="Andres Gallego"
                   />
                 </div>
                 <div class="col-sm-3">
@@ -41,6 +43,14 @@
                     <option value="1">5</option>
                     <option value="2">6</option>
                     <option value="3">7</option>
+                    <option value="3">8</option>
+                    <option value="3">9</option>
+                    <option value="3">10</option>
+                    <option value="3">11</option>
+                    <option value="3">12</option>
+                    <option value="3">13</option>
+                    <option value="3">14</option>
+                    <option value="3">15</option>
                   </select>
                 </div>
                 <div class="col-sm-4">
@@ -48,7 +58,7 @@
                   <input
                     type="email"
                     class="form-control"
-                    placeholder="Username"
+                    placeholder="andres@gmail.com"
                   />
                 </div>
                 <div class="col-sm-4">
@@ -56,7 +66,7 @@
                   <input
                     type="email"
                     class="form-control"
-                    placeholder="Username"
+                    placeholder="10/09/2005"
                   />
                 </div>
                 <div class="col-sm-2">
@@ -67,22 +77,19 @@
                     <option value="2">Femenino</option>
                   </select>
                 </div>
-                <div
-                  class="col-sm-12"
-                  style="text-align: end; margin-top: 10px"
-                >
-                  <button class="o-btn" (click)="show1 = !show1">
+                <div class="col-sm-12" style="text-align: end;">
+                  <button type="button" class="btn btn-primary" (click)="show=2">
                     Siguiente
                   </button>
                 </div>
               </form>
             </fieldset>
           </div>
-          <div *ngIf="!show1">
+          <div *ngIf="show==2">
             <fieldset>
               <form class="row gx-6 gy-5 d-flex justify-content-evenly">
                 <h2>Información médica</h2>
-                <div class="col-sm-1" style="margin-bottom: 30px">
+                <div class="col-sm-2">
                   <label>Estatura(cm)</label>
                   <input
                     type="text"
@@ -90,17 +97,18 @@
                     placeholder="180"
                   />
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-2">
                   <label>Peso (kg) </label>
                   <select class="form-select" id="specificSizeSelect">
                     <option selected>Escoge</option>
-                    <option value="1">5</option>
-                    <option value="2">6</option>
-                    <option value="3">7</option>
+                    <option value="1">50 kg</option>
+                    <option value="2">60 kg</option>
+                    <option value="3">70 kg</option>
+                    <option value="3">80 kg</option>
                   </select>
                 </div>
                 <h2>Comorbilidades</h2>
-                <div class="col-4" style="margin-bottom: 30px">
+                <div class="col-4">
                   <div><label>¿Presenta en enfermedades cardiacas?</label></div>
                   <div class="d-flex justify-content-around align-items-center">
                   <div class="form-check form-check-inline">
@@ -189,12 +197,12 @@
                   class="col-sm-6"
                   style="text-align: start; margin-top: 20px"
                 >
-                  <button class="o-btn" (click)="show1 = !show1">
+                  <button type="button" class="btn btn-primary" (click)="show=1">
                     Anterior
                   </button>
                 </div>
                 <div class="col-sm-6" style="text-align: end; margin-top: 20px">
-                  <button class="o-btn" (click)="show2 = !show2">
+                  <button type="button" class="btn btn-primary" (click)="show=3">
                     Siguiente
                   </button>
                 </div>
@@ -202,11 +210,11 @@
             </form>
             </fieldset>
           </div>
-          <div *ngIf="!show2">
+          <div *ngIf="show==3">
             <fieldset>
                 <form class="row gx-6 gy-5 d-flex justify-content-evenly">
                     <h2>Deportes</h2>
-                    <div class="col-4" style="margin-bottom: 30px">
+                    <div class="col-4">
                         <div><label>¿Te gusta el fútbol?</label></div>
                         <div class="d-flex justify-content-around align-items-center">
                         <div class="form-check form-check-inline">
@@ -232,7 +240,7 @@
                         </div>
                       </div>
                       </div>
-                      <div class="col-4" style="margin-bottom: 30px">
+                      <div class="col-4">
                         <div><label>¿Te gusta el Voleibol?</label></div>
                         <div class="d-flex justify-content-around align-items-center">
                         <div class="form-check form-check-inline">
@@ -246,7 +254,7 @@
                       </div>
                       </div>
                       <h2>Baile</h2>
-                      <div class="col-4" style="margin-bottom: 30px">
+                      <div class="col-4">
                           <div><label>¿Te gusta bailar salsa?</label></div>
                           <div class="d-flex justify-content-around align-items-center">
                           <div class="form-check form-check-inline">
@@ -272,7 +280,7 @@
                           </div>
                         </div>
                         </div>
-                        <div class="col-4" style="margin-bottom: 30px">
+                        <div class="col-4">
                           <div><label>¿Te gusta bailar folklor?</label></div>
                           <div class="d-flex justify-content-around align-items-center">
                           <div class="form-check form-check-inline">
@@ -290,13 +298,14 @@
                       class="col-sm-6"
                       style="text-align: start; margin-top: 20px"
                     >
-                      <button class="o-btn" (click)="show1 = !show1">
+                      <button type="button" class="btn btn-primary" (click)="show=2">
                         Anterior
                       </button>
                     </div>
                     <div class="col-sm-6" style="text-align: end; margin-top: 20px">
-                      <button class="o-btn" (click)="show2 = !show2"> Terminar
-                      </button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Terminar
+                          </button>
                     </div>
                 </div>
                 </form>
@@ -307,3 +316,21 @@
     </div>
   </div>
 </div>
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel">Cuenta fue creada con éxito</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Ahora puedes disfrutar de la plataforma y aprender jugando
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Entendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<app-footer></app-footer>
